@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --config webpack.config.dev.js"
+    "dev": "webpack-dev-server --config webpack.config.dev.js",
+    "lint": "eslint ./"
   },
   "keywords": [],
   "author": "",
@@ -16,10 +17,13 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.6.3",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-dynamic-import-node": "^2.3.0",
     "compression-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
+    "eslint": "^6.6.0",
+    "eslint-plugin-vue": "^5.2.3",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
