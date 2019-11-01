@@ -5,16 +5,16 @@
 </template>
 
 <script>
-  export default {
-    name: 'App'
-  }
+export default {
+  name: 'App'
+}
 </script>
 
 <style>
-  body {
-    font-family: 'Roboto', sans-serif;
-  }
-  h1 {
-    text-align: center;
-  }
+body {
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  text-align: center;
+}
 </style>
