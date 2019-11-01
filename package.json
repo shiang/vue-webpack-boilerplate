@@ -39,5 +39,13 @@
   },
   "dependencies": {
     "vue": "^2.6.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiang/vue-webpack-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shiang/vue-webpack-boilerplate/issues"
+  },
+  "homepage": "https://github.com/shiang/vue-webpack-boilerplate#readme"
 }
