@@ -21,6 +21,7 @@
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.6.3",
     "babel-eslint": "^10.0.3",
@@ -40,7 +41,10 @@
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "prettier": "^1.18.2",
     "pretty-quick": "^2.0.0",
+    "svg-inline-loader": "^0.8.0",
+    "terser-webpack-plugin": "^2.2.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^2.2.0",
     "vue-loader": "^15.7.1",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.10",
@@ -50,6 +54,8 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "core-js": "^3.4.1",
+    "regenerator-runtime": "^0.13.3",
     "vue": "^2.6.10"
   },
   "repository": {

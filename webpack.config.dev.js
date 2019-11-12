@@ -15,6 +15,14 @@ const webpackConfig = merge(commonConfig, {
     filename: 'js/[name].bundle.js',
     chunkFilename: 'js/[id].chunk.js'
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['vue-style-loader', 'css-loader']
+      }
+    ]
+  },
   optimization: {
     runtimeChunk: 'single',
     splitChunks: {

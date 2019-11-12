@@ -2,7 +2,8 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+// const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const helpers = require('./helpers')
 const commonConfig = require('./webpack.config.base')
@@ -10,11 +11,20 @@ const isProd = process.env.NODE_ENV === 'production'
 
 const webpackConfig = merge(commonConfig, {
   mode: 'production',
+  devtool: 'source-map',
   output: {
     path: helpers.root('dist'),
     publicPath: '/',
     filename: 'js/[hash].js',
     chunkFilename: 'js/[id].[hash].chunk.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [MiniCSSExtractPlugin.loader, 'css-loader']
+      }
+    ]
   },
   optimization: {
     runtimeChunk: 'single',
@@ -24,7 +34,7 @@ const webpackConfig = merge(commonConfig, {
           preset: ['default', { discardComments: { removeAll: true } }]
         }
       }),
-      new UglifyJSPlugin({
+      new TerserPlugin({
         cache: true,
         parallel: true,
         sourceMap: !isProd
